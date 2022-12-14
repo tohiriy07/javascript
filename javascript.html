@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+	<script type="text/javascript" src="js/lesson1.js"></script>
+	<!-- <script type="text/javascript" src="js/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>   -->
+
+
+	<!-- favicon uchun link tegi ishlatilatdi va rel="icon" type="image/x-icon" bilan ishlatiladi  -->
+	<link rel="icon" type="image/x-icon" href="img/website-icon-14.png">
+	<script type="text/javascript">
+		function myFunction() {
+  		document.getElementById("demo").innerHTML = "Paragraph changed.";
+		}
+	</script>
+	<title>First js code</title>
+</head>
+<body>
+	<div class="container">
+		<h1>First js code</h1>
+		<button type="button"
+		onclick="document.getElementById('demo1').innerHTML = Date()">
+		Click me to display Date and Time.</button>
+		<p id="demo1"></p>
+
+
+		<p id="demo2">Javascript can change HTML content</p>
+		<button type="button" onclick="document.getElementById('demo2').innerHTML=('hello Javascript')" class="btn btn-primary">Click here</button>
+
+					<!--     rasm ozgarishi    -->
+
+		<p>JavaScript can change HTML attribute values.</p>
+
+		<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+		<button onclick="document.getElementById('myImage').src='img/pic_bulbon.gif'" class="btn btn-warning">Turn on the light</button>
+
+		<img id="myImage" src='img/pic_bulboff.gif' style="width:100px">
+
+		<button onclick="document.getElementById('myImage').src='img/pic_bulboff.gif'" class="btn btn-muted">Turn off the light</button>
+
+		<h2>Demo JavaScript in Head</h2>
+
+		<p id="demo">A Paragraph.</p>
+
+		<button type="button" onclick="myFunction()" class="btn d-flex btn-circle">Try it</button>
+		<div>
+			<input type="button" onclick="alert('Hey remember to tell your friends about Javascript')" value="Display example">
+		</div>
+		<input type="button" onclick="confirm('Are you sure you want to delete the Internet?');" value="Display">
+		<div><input type="button" onclick="prompt('Enter your favourite website')" value="websites"></div>
+		<div>
+			<input type="button" onclick="alert('Alert is comfortable atribute')" value="Click me!">
+		</div>
+		<div>
+			<input type="button" ondblclick="alert('Double click show me important elements')" value="Double click!">
+		</div>
+		<script>
+			function displayMessage(firstName){
+				alert('hello '+firstName + ", hope you like Javascript function");
+			}
+		</script>
+		<form>
+  			First name:
+  			<input type="input" name="yourName">
+  			<input type="button" onclick="displayMessage(form.yourName.value);" value="Submit">
+		</form>
+		<!--<p onmouseover="document.write('Wow... you sure know how to hover over on element')">Hover over me </p> -->
+		<!-- <script>
+			function analyzeColor1(myColor) {
+				if (myColor=="blue") {
+					alert('Just like the sky');
+				}
+			}
+		</script>
+		<h3>Favourite color</h3>
+		<label>
+			<input type="radio" name="fav_color1" value="blue" onclick="analyzecolor(this.value);">
+			blue
+		</label>
+		<label>
+			<input type="radio" name="fav_color1" value="green" onclick="analyzecolor(this.value);">
+			green
+		</label>
+		<label>
+			<input type="radio" name="fav_color1" value="red" onclick="analyzecolor(this.value);">
+			red
+		</label> -->
+		<script>
+			function analyzeColor(myColor) {
+			switch (myColor)
+				{
+				case "Blue":
+				alert("Just like the sky!");
+				break
+				case "Red":
+				alert("Just like shiraz!");
+				break
+				default:
+				alert("Suit yourself then...");
+			}
+			}
+		</script>
+		<h3>Favorite Color</h3>
+		<label>
+			<input type="radio" name="fav_color" value="Blue" onclick="analyzeColor(this.value);"> Blue
+		</label>
+		<label>
+			<input type="radio" name="fav_color" value="Red" onclick="analyzeColor(this.value);"> Red
+		</label>
+		<label>
+			<input type="radio" name="fav_color" value="Green" onclick="analyzeColor(this.value);"> Green
+		</label>
+		<label>
+		<input type="radio" name="fav_color" value="None" onclick="analyzeColor(this.value);"> None
+		</label>
+		<script>
+			var myBankBalance = 0;
+			var msg = "";
+
+			while (myBankBalance <= 10) {
+  			msg = msg + "My bank balance is $" + myBankBalance + "<br>";
+  			myBankBalance ++;
+			}
+			document.write(msg);
+		</script>
+		<a href="JavaScript:void(0);" ondblclick="alert('Well done!')">Double Click Me!</a>
+		
+	</div>
+</body>
+</html>
